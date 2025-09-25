@@ -35,7 +35,7 @@ export const commands: Command = [
   { cmd: "gui", desc: "go to my portfolio in GUI", tab: 10 },
   { cmd: "help", desc: "check available commands", tab: 9 },
   { cmd: "history", desc: "view command history", tab: 6 },
-  { cmd: "projects", desc: "view projects that I've coded", tab: 5 },
+  { cmd: "projects", desc: "view projects that I've worked on", tab: 5 },
   { cmd: "pwd", desc: "print current working directory", tab: 10 },
   { cmd: "certs", desc: "check out my certifications", tab: 8 },
   { cmd: "themes", desc: "check available themes", tab: 7 },
