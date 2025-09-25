@@ -31,8 +31,5 @@ COPY --from=builder /app/dist /app
 # Set working directory
 WORKDIR /app
 
-# Expose port (Railway will set the PORT env var)
-EXPOSE $PORT
-
 # Start the server on Railway's dynamic port
-CMD serve -s . -l ${PORT:-3000}
+CMD serve -s . -l $PORT
