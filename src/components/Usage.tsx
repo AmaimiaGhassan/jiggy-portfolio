@@ -1,13 +1,15 @@
+import React from "react";
 import { UsageDiv } from "./styles/Output.styled";
 
 type Props = {
-  cmd: "themes" | "projects" | "socials";
+  cmd: "themes" | "projects" | "certs";
   marginY?: boolean;
 };
 
-const arg = {
+const arg: Record<string, { placeholder: string; example: string }> = {
   themes: { placeholder: "theme-name", example: "ubuntu" },
   projects: { placeholder: "project-no", example: "4" },
+  certs: { placeholder: "cert-no", example: "1" },
   socials: { placeholder: "social-no", example: "1" },
 };
 

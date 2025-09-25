@@ -9,7 +9,7 @@ import Help from "./commands/Help";
 import Welcome from "./commands/Welcome";
 import History from "./commands/History";
 import Projects from "./commands/Projects";
-import Socials from "./commands/Socials";
+import Certifications from "./commands/Certifications";
 import Themes from "./commands/Themes";
 import { OutputContainer, UsageDiv } from "./styles/Output.styled";
 import { termContext } from "./Terminal";
@@ -23,7 +23,7 @@ type Props = {
 const Output: React.FC<Props> = ({ index, cmd }) => {
   const { arg } = useContext(termContext);
 
-  const specialCmds = ["projects", "socials", "themes", "echo"];
+  const specialCmds = ["projects", "certs", "themes", "echo"];
 
   // return 'Usage: <cmd>' if command arg is not valid
   // eg: about tt
@@ -43,11 +43,11 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           help: <Help />,
           history: <History />,
           projects: <Projects />,
-          pwd: <GeneralOutput>/home/satnaing</GeneralOutput>,
-          socials: <Socials />,
+          pwd: <GeneralOutput>/home/jiggy</GeneralOutput>,
+          certs: <Certifications />,
           themes: <Themes />,
           welcome: <Welcome />,
-          whoami: <GeneralOutput>visitor</GeneralOutput>,
+          whoami: <GeneralOutput>recruiter</GeneralOutput>,
         }[cmd]
       }
     </OutputContainer>

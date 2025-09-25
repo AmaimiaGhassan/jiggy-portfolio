@@ -1,0 +1,13 @@
+services:
+  terminal-portfolio:
+    build: .
+    container_name: terminal-portfolio
+    ports:
+      - "3000:3000"
+    environment:
+      - HOST=0.0.0.0
+    volumes:
+      - .:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true

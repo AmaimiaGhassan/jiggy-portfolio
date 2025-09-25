@@ -56,27 +56,27 @@ const Projects: React.FC = () => {
 const projects = [
   {
     id: 1,
-    title: "Sat Naing's Blog",
-    desc: "My personal blog where I can write down my thoughts and experiences.",
-    url: "https://satnaing.dev/blog/",
+    title: "SOC Automation Lab",
+    desc: "Spearheaded implementation of a SOC automation lab utilizing Wazuh, TheHive, and Shuffle, resulting in a 15% reduction in false positive alerts and freeing up 10 hours per week for critical tasks.",
+    url: "",
   },
   {
     id: 2,
-    title: "Haru Fashion",
-    desc: "An ecommerce web application where users can browse various products and make purchases.",
-    url: "https://haru-fashion.vercel.app/",
+    title: "Active Directory Pentesting HomeLab",
+    desc: "Designed, built, and maintained a personal homelab that simulates a full Active Directory environment, integrating and managing various monitoring and security tools to practice system administration, network management, and security monitoring in a hands-on environment.",
+    url: "https://ghassanamaimia.hashnode.dev/oscp-journey-active-directory-home-lab",
   },
   {
     id: 3,
-    title: "Haru API",
-    desc: "A RESTful API developed for the Haru fashion ecommerce project.",
-    url: "https://satnaing.github.io/haru-api/",
+    title: "Cyber Security Personal Blog",
+    desc: "A platform to share my thoughts and experiences in the field of Cyber Security.",
+    url: "https://ghassanamaimia.hashnode.dev",
   },
   {
     id: 4,
-    title: "AstroPaper Blog Theme",
-    desc: "A minimal, accessible and SEO-friendly Astro blog theme.",
-    url: "https://astro-paper.pages.dev/",
+    title: "Source code web Crawler",
+    desc: "a python based automation tool that I developped to crawl the source code of a web app after succesfully finding a LFI",
+    url: "https://github.com/AmaimiaGhassan/Crawler",
   },
 ];
 

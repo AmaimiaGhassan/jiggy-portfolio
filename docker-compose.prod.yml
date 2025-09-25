@@ -1,0 +1,24 @@
+services:
+  # Development setup (your existing one)
+  terminal-portfolio-dev:
+    build: .
+    container_name: terminal-portfolio-dev
+    ports:
+      - "3000:3000"
+    environment:
+      - HOST=0.0.0.0
+    volumes:
+      - .:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
+
+  # Production setup
+  terminal-portfolio-prod:
+    build:
+      context: .
+      dockerfile: dockerfile.prod
+    container_name: terminal-portfolio-prod
+    ports:
+      - "80:80"
+    restart: unless-stopped
