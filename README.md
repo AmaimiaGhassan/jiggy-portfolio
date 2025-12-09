@@ -1,96 +1,76 @@
-# Terminal Portfolio Website by Sat Naing
+# Terminal Portfolio
 
-![Terminal Portfolio Website by Sat Naing](https://user-images.githubusercontent.com/53733092/194220661-e2ff8b4c-f64a-4b64-a836-c52fae6bbcda.png)
+A small terminal-style personal portfolio built with React + Vite and styled-components. The app is containerized and deployed via Railway to https://0xjiggy.me. A Docker image is published to Docker Hub as `xjiggy/terminal-portfolio`.
 
-![ts](https://badgen.net/badge/Built%20With/TypeScript/blue?style=flat-square)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/81fdb91d-c06f-46c2-b18d-dfc6f090f281/deploy-status)](https://app.netlify.com/sites/terminal-sn/deploys)
-![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)
+Quick links
 
-My perfolio website in terminal version developed with React, TypeScript and Styled-Components. Multiple themes supported and keyboard shortcuts can be used for some functionalities.
+- Live: https://0xjiggy.me
+- Docker image: https://hub.docker.com/r/xjiggy/terminal-portfolio
 
-Blog Post: https://satnaing.dev/blog/posts/how-do-i-develop-my-terminal-portfolio-website-with-react
+Badges
 
-## Demo
+- Build / CI: [![CI — build, test, coverage](https://github.com/AmaimiaGhassan/jiggy-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/AmaimiaGhassan/jiggy-portfolio/actions/workflows/ci.yml)
 
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=App&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - try it in your editor</a>
+Getting started (local)
 
-## Features
+Prerequisites:
 
-- Responsive Design 📱💻
-- Multiple themes 🎨
-- Autocomplete feature ✨ (TAB | Ctrl + i)
-- Go previous and next command ⬆️⬇️
-- View command history 📖
-- PWA and Offline Support 🔥
-- Well-tested ✅
+- Node 18+, pnpm, Docker (optional)
 
-## Tech Stack
-
-**Frontend** - [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/)  
-**Styling** - [Styled-Components](https://styled-components.com/)  
-**UI/UX** - [Figma](https://figma.com/)  
-**State Management** - [ContextAPI](https://reactjs.org/docs/context.html)  
-**Testing** - [Vitest](https://vitest.dev/), [React Testing Library](https://testing-library.com/)  
-**Deployment** - [Netlify](https://app.netlify.com/)
-
-## Multiple Themes
-
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=App&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - Dark theme</a><br/>
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=AppLight&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - light theme</a><br/>
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=AppBlue&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - blue-matrix theme</a><br/>
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=AppEspresso&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - espresso theme</a><br/>
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=AppGreen&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - green-goblin theme</a><br/>
-<a href="https://www.jinno.app/redirect?from=satnaing&redirect=libary&libName=terminal-portfolio&componentName=AppUbuntu&libCreator=satnaing" target="_blank" rel="noopener noreferrer">Demo - ubuntu theme</a><br/>
-
-Currently, this website supports 6 themes. Type `themes` in the terminal for more info.
-![terminal-portfolio-themes](https://user-images.githubusercontent.com/53733092/194221801-94f1c28b-4865-4b7f-a73e-d41132519bea.png)
-
-## Lighthouse Score
-
-<p align="center">
-<img width="710" alt="Sat Naing Terminal Lighthouse Score" src="public/lighthouse-result.svg">
-</p>
-
-## Running Locally
-
-Clone the project
+Run locally (dev):
 
 ```bash
-git clone https://github.com/satnaing/terminal-portfolio.git
+pnpm install
+pnpm dev
+# open http://localhost:5173 (vite default) or the HOST/PORT you configured
 ```
 
-Go to the project directory
+Build and preview:
 
 ```bash
-cd terminal-portfolio
+pnpm build
+pnpm preview
 ```
 
-Remove remote origin
+Run with Docker (production image):
 
 ```bash
-git remote remove origin
+# Build (optional - you already push to Docker Hub)
+docker build -f dockerfile.prod -t xjiggy/terminal-portfolio:latest .
+
+# Run (map port 5000 or chosen PORT)
+docker run --rm -p 5000:5000 -e PORT=5000 xjiggy/terminal-portfolio:latest
 ```
 
-Install dependencies
+Docker Compose (production)
+
+This repo includes a `docker-compose.prod.yml` for running the production service locally.
 
 ```bash
-npm install
+docker compose -f docker-compose.prod.yml up --build -d
 ```
 
-Start the server
+Testing
+
+Run tests (Vitest):
 
 ```bash
-npm run dev
+pnpm test:once
 ```
 
-## Inspiration and Credits
+Repository structure
 
-Here are some inspiration for this kind of terminal website. Only some features and functionalities are inspired by these following websites. All codes are written on my own.
+Important docs in this repo:
 
-- I built this repository using [Jinno](https://www.jinno.app/redirect?from=satnaing&redirect=vs)
-- [term m4tt72](https://term.m4tt72.com/)
-- [Forrest](https://fkcodes.com/)
+- `DEPLOYMENT.md` — how Railway and Namecheap are configured for this project
+- `USER_STORIES.md` — required user stories and acceptance criteria
+- `ARCHITECTURE.md` — system overview and deployment diagram
+- `DOCKER_PUSH.md` — how the image is built and pushed to Docker Hub
+- `dockerfile.prod` / `docker-compose.prod.yml` — production container configuration
 
-## Author
+Notes for graders
 
-- [@satnaing](https://satnaing.dev)
+- CI/CD: Commits to GitHub are automatically deployed via Railway to the custom domain `0xjiggy.me`.
+- Docker: Image `xjiggy/terminal-portfolio:latest` is available on Docker Hub.
+
+If you want, I can add a CI build badge or a GitLab CI equivalent (.gitlab-ci.yml) for the course requirements.

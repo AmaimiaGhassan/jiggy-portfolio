@@ -38,7 +38,7 @@ const Certifications = () => {
 
   return (
     <Wrapper data-testid="certs">
-      <p>"Education is not enough"? I got you.</p>
+      <p>" is not enough"? I got you.</p>
       <p>Here are some of my certifications that I succeeded to pass:</p>
       <br />
       {certifications.map(({ id, title, desc }) => (
