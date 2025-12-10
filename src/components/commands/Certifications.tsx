@@ -9,7 +9,7 @@ import { termContext } from "../Terminal";
 const certifications = [
   {
     id: 1,
-    title: "CRTP Certification",
+    title: "CRTP Certification 20",
     desc: "Certified Red Team Professional * Pentesting Active Directory Environments",
     url: "https://www.credential.net/3d411f2c-f8f1-4d40-b9ce-378f1d8cdd13#acc.9XhvsfI0",
   },
