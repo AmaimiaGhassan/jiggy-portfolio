@@ -10,12 +10,12 @@ const certifications = [
   {
     id: 1,
     title: "CRTP Certification",
-    desc: "Certified Red Team Professional - Pentesting Active Directory Environments",
+    desc: "Certified Red Team Professional * Pentesting Active Directory Environments",
     url: "https://www.credential.net/3d411f2c-f8f1-4d40-b9ce-378f1d8cdd13#acc.9XhvsfI0",
   },
   {
     id: 2,
-    title: "Ejpt Certification", 
+    title: "Ejpt Certification ", 
     desc: "Elearn Security Junior Penetration Tester - Practical Pentesting Skills",
     url: "https://certs.ine.com/46d800c8-cea1-48f7-905e-f728d5f276ff",
   },
